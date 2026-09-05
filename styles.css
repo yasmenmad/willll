@@ -1,101 +1,71 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #fff5f5;
-    font-family: 'Indie Flower', cursive;
+    background-color: #fbeefe;
+    font-family: 'Indie Flower', cursive, sans-serif;
     overflow: hidden;
 }
 
 .container {
     text-align: center;
-    background-color: #ffebee;
-    padding: 40px;
-    border-radius: 20px;
-    border: 3px solid #ff6b81;
-    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
-    max-width: 400px;
+    position: relative;
+    max-width: 500px;
     width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
 }
 
 .header_text {
-    font-size: 36px;
-    color: #ff6b81;
+    font-size: 2.8em;
+    color: #e11d48;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
 }
 
 .gif_container img {
-    max-width: 100%;
+    width: 220px;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
 }
 
 .buttons {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    min-height: 60px;
 }
 
 .btn {
-    padding: 12px 24px;
-    font-size: 20px;
-    border: 2px solid #ff6b81;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #ff6b81;
+    background-color: #fb7185;
     color: white;
-    font-family: 'Indie Flower', cursive;
-    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.5em;
+    font-family: inherit;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(251, 113, 133, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn:hover {
-    background-color: white;
-    color: #ff6b81;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+    background-color: #f43f5e;
+    transform: scale(1.08);
 }
 
 #noButton {
-    background-color: #ff4757;
-    border-color: #ff4757;
-}
-
-#noButton:hover {
-    background-color: white;
-    color: #ff4757;
-}
-
-@keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.wiggle {
-    animation: wiggle 0.5s ease-in-out;
-}
-
-@keyframes heartFade {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.5); }
-}
-
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    transform: translate(-50%, -50%);
-    animation: heartFade 1s ease-out forwards;
-    background-color: #ff6b81;
-    border-radius: 50%;
+    position: relative;
 }
